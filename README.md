@@ -35,21 +35,7 @@ if ($rule) {
 }
 ```
 
-## Connect from WSL
-
-For default NAT networking, run in WSL to discover the current Windows host address:
-
-```sh
-ip route show default
-```
-
-Use the address following `via` in `http://<WindowsHostIP>:9223`, for example:
-
-```javascript
-const browser = await chromium.connectOverCDP(
-  'http://172.22.0.1:9223', { timeout: 30 * 60 * 1000 }
-);
-```
+Trigger AI prompt in WSL similar to: "use playwright to connect to edge at port 9223 on the Windows host and ..."
 
 Both the Windows gateway and WSL address can change after WSL shutdown/restart or a Windows reboot. Rediscover the
 gateway and rerun the firewall setup when the WSL address changes. With WSL mirrored networking, Windows services can
