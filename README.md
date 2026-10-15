@@ -68,4 +68,4 @@ $shortcut.Description = 'Start Edge with remote debugging for Playwright'
 $shortcut.Save()
 ```
 
-Right-click the shortcut and select **Pin to taskbar**.
+Right-click the shortcut, "Show more options" and select "**Pin to taskbar**".
